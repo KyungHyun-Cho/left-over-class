@@ -18,7 +18,7 @@ fun main() {
 fun solution(board: Array<IntArray>, moves: IntArray): Int {
     var answer = 0
     val bucket = ArrayDeque<Int>()
-    val stackBoard = List<ArrayDeque<Int>>(board.size) { ArrayDeque() }.apply {
+    val stackBoard = List(board.size) { ArrayDeque<Int>() }.apply {
         board.forEach { row ->
             row.forEachIndexed { idx, item ->
                 if (item != 0) this[idx].addFirst(item)

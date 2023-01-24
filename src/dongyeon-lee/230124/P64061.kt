@@ -15,9 +15,8 @@ class Solution {
         }
 
         return moves.map { moves ->
-            val doll = dolls[moves - 1].pollOrNull()
-            doll?.let {
-                if (basket.isNotEmpty() && basket.peek() == it) {
+            dolls[moves - 1].pollOrNull()?.let { doll ->
+                if (basket.isNotEmpty() && basket.peek() == doll) {
                     basket.pop()
                     2
                 } else basket.push(doll).let { 0 }

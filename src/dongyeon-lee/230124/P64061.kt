@@ -1,27 +1,14 @@
-import java.util.LinkedList
-import java.util.Queue
-import java.util.Stack
-
 class Solution {
     fun solution(board: Array<IntArray>, moves: IntArray): Int {
-        val dolls = List<Queue<Int>>(board.first().size) { LinkedList() }
-        val basket = Stack<Int>()
-        board.forEach {
-            it.forEachIndexed { index, doll ->
-                if (doll != 0) {
-                    dolls[index].offer(doll)
-                }
-            }
-        }
-
-        return moves.map { moves ->
-            dolls[moves - 1].pollOrNull()?.let { doll ->
-                if (basket.isNotEmpty() && basket.peek() == doll) {
-                    basket.pop()
+        val dolls = List(board.size) { x -> ArrayDeque(board.map { it[x] }.filter { it > 0 }.reversed()) }
+        val basket = ArrayDeque<Int>()
+        return moves.map { move ->
+            dolls[move.dec()].removeLastOrNull()?.let { doll ->
+                if (basket.lastOrNull() == doll) {
+                    basket.removeLast()
                     2
-                } else basket.push(doll).let { 0 }
+                } else basket.add(doll).let { 0 }
             } ?: 0
         }.sum()
     }
-    fun <T>Queue<T>.pollOrNull() = if (this.isNotEmpty()) this.poll() else null
 }

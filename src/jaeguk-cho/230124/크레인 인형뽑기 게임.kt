@@ -7,9 +7,8 @@ import kotlin.collections.ArrayDeque
 
 class Solution {
     fun solution(board: Array<IntArray>, moves: IntArray): Int {
-        val (r, c) = board.size to board.first().size
-        val rotatedBoard = List(c) { x -> List(r) { y -> board[y][x] } }
-        val map = List(c) { ArrayDeque(rotatedBoard[it].filter { it > 0 }) }
+        val (_, c) = board.size to board.first().size
+        val map = List(c) { x -> ArrayDeque(board.map { it[x] }.filter { it > 0 }) }
         val basket = Stack<Int>()
         var ans = 0
 

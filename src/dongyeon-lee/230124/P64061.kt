@@ -7,15 +7,15 @@ class Solution {
         val dolls = List<Queue<Int>>(board.first().size) { LinkedList() }
         val basket = Stack<Int>()
         board.forEach {
-            it.forEachIndexed { index, i ->
-                if (i != 0) {
-                    dolls[index].offer(i)
+            it.forEachIndexed { index, doll ->
+                if (doll != 0) {
+                    dolls[index].offer(doll)
                 }
             }
         }
 
-        return moves.map {
-            val doll = dolls[it - 1].pollOrNull()
+        return moves.map { moves ->
+            val doll = dolls[moves - 1].pollOrNull()
             doll?.let {
                 if (basket.isNotEmpty() && basket.peek() == it) {
                     basket.pop()

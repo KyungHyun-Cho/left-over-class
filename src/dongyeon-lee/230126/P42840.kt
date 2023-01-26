@@ -17,8 +17,8 @@ class Solution {
         }.let {
             val max = it.maxOrNull()
             it.mapIndexed { index, score ->
-                if (score == max) index.inc() else -100
-            }
-        }.filter { it > 0 }.toIntArray()
+                index.inc().takeIf { score == max }
+            }.filterNotNull()
+        }.toIntArray()
     }
 }

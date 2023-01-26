@@ -1,6 +1,5 @@
 class Solution {
     fun solution(answers: IntArray): IntArray {
-        var answer = intArrayOf()
         val one = listOf(1, 2, 3, 4, 5)
         val two = listOf(2, 1, 2, 3, 2, 4, 2, 5)
         val three = listOf(3, 3, 1, 1, 2, 2, 4, 4, 5, 5)

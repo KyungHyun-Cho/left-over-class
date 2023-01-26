@@ -11,7 +11,7 @@ class Solution {
                 }
             }
         }.reduce { acc, ints ->
-            acc.mapIndexed { index, i ->
+            acc.mapIndexed { index, _ ->
                 acc[index] + ints[index]
             }
         }.let {

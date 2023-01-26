@@ -13,10 +13,10 @@ fun solution(answers: IntArray): List<Int> {
         listOf(2, 1, 2, 3, 2, 4, 2, 5),
         listOf(3, 3, 1, 1, 2, 2, 4, 4, 5, 5))
 
-    val answerCnt = rules.map { rules ->
-        answers.withIndex().count { it.value == rules[it.index % rules.size] }
+    val answerCnt = rules.map { rule ->
+        answers.withIndex().count { it.value == rule[it.index % rule.size] }
     }
 
     val max = answerCnt.maxOrNull()
-    return answerCnt.mapIndexed { index, i -> (index + 1).takeIf { i == max } }.filterNotNull()
+    return answerCnt.mapIndexed { idx, cnt -> (idx + 1).takeIf { cnt == max } }.filterNotNull()
 }

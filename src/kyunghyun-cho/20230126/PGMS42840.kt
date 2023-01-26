@@ -14,7 +14,7 @@ fun solution(answers: IntArray): List<Int> {
         listOf(3, 3, 1, 1, 2, 2, 4, 4, 5, 5))
 
     val answerCnt = rules.map { rule ->
-        answers.withIndex().count { it.value == rule[it.index % rule.size] }
+        answers.withIndex().count { (idx, answer) -> answer == rule[idx % rule.size] }
     }
 
     val max = answerCnt.maxOrNull()

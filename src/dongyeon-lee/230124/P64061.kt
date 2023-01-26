@@ -1,3 +1,5 @@
+package `dongyeon-lee`.`230124`
+
 class Solution {
     fun solution(board: Array<IntArray>, moves: IntArray): Int {
         val dolls = List(board.size) { x -> ArrayDeque(board.map { it[x] }.filter { it > 0 }.reversed()) }

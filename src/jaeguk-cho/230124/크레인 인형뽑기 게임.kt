@@ -1,3 +1,5 @@
+package `jaeguk-cho`.`크레인 인형뽑기 게임`
+
 /**
  * @author Jaeguk Cho
  */

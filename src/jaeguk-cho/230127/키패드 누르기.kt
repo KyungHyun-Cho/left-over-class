@@ -13,7 +13,8 @@ class `키패드 누르기` {
         val moveLeft = { next: Keypad -> left = next; "L" }
         val moveRight = { next: Keypad -> right = next; "R" }
 
-        return numbers.map { Keypad.getByKey(it) }.joinToString("") { next ->
+        return numbers.joinToString("") {
+            val next = Keypad.getByKey(it)
             when {
                 next.isLeft() -> moveLeft(next)
                 next.isRight() -> moveRight(next)

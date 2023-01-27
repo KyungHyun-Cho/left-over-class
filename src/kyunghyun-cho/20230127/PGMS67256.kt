@@ -12,8 +12,8 @@ fun main() {
 }
 
 fun solution(numbers: IntArray, hand: String): String {
-    var lPos = 10
-    var rPos = 12
+    var lPos = 10 // 왼손 초기값 * (키패드에서 10번째 순서)
+    var rPos = 12 // 오른손 초기값 # (캐피드에서 12번째 순서)
 
     val setLPosAndReturn = {number: Int -> lPos = number; "L"}
     val setRPosAndReturn = {number: Int -> rPos = number; "L"}

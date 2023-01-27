@@ -34,6 +34,6 @@ fun solution(numbers: IntArray, hand: String): String {
 
 infix fun Int.dist(other: Int) = getDist(this.toXY(), other.toXY())
 
-fun Int.toXY() = if(this == 0) 3 to 1 else (this-1) / 3 to (this-1) % 3
+fun Int.toXY() = (if(this == 0) 10 else this-1).let { it / 3 to it % 3 }
 
 fun getDist(srcXY: Pair<Int, Int>, destXY: Pair<Int, Int>) = abs(srcXY.first - destXY.first) + abs(srcXY.second - destXY.second)

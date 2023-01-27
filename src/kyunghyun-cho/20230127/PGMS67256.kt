@@ -15,8 +15,8 @@ fun solution(numbers: IntArray, hand: String): String {
     var lPos = 10 // 왼손 초기값 * (키패드에서 10번째 순서)
     var rPos = 12 // 오른손 초기값 # (캐피드에서 12번째 순서)
 
-    val setLPosAndReturn = {number: Int -> lPos = number; "L"}
-    val setRPosAndReturn = {number: Int -> rPos = number; "L"}
+    val setLPosAndReturn = { number: Int -> lPos = number; "L" }
+    val setRPosAndReturn = { number: Int -> rPos = number; "L" }
 
     return numbers.joinToString("") { number ->
         when (number) {
@@ -25,11 +25,10 @@ fun solution(numbers: IntArray, hand: String): String {
             else -> {
                 val lDist = lPos dist number
                 val rDist = rPos dist number
-
-                when{
+                when {
                     lDist < rDist -> setLPosAndReturn(number)
                     rDist < lDist -> setRPosAndReturn(number)
-                    else -> if(hand == "left") setLPosAndReturn(number) else setRPosAndReturn(number)
+                    else -> if (hand == "left") setLPosAndReturn(number) else setRPosAndReturn(number)
                 }
             }
         }
@@ -38,6 +37,7 @@ fun solution(numbers: IntArray, hand: String): String {
 
 infix fun Int.dist(other: Int) = getDist(this.toXY(), other.toXY())
 
-fun Int.toXY() = (if(this == 0) 10 else this-1).let { it / 3 to it % 3 }
+fun Int.toXY() = (if (this == 0) 10 else this - 1).let { it / 3 to it % 3 }
 
-fun getDist(srcXY: Pair<Int, Int>, destXY: Pair<Int, Int>) = abs(srcXY.first - destXY.first) + abs(srcXY.second - destXY.second)
+fun getDist(srcXY: Pair<Int, Int>, destXY: Pair<Int, Int>) =
+    abs(srcXY.first - destXY.first) + abs(srcXY.second - destXY.second)

@@ -15,17 +15,20 @@ fun solution(numbers: IntArray, hand: String): String {
     var lPos = 10
     var rPos = 12
 
+    val setLPosAndReturn = {number: Int -> lPos = number; "L"}
+    val setRPosAndReturn = {number: Int -> rPos = number; "L"}
+
     return numbers.joinToString("") { number ->
         when (number) {
-            1, 4, 7 -> {lPos = number; "L"}
-            3, 6, 9 -> {rPos = number; "R"}
+            1, 4, 7 -> setLPosAndReturn(number)
+            3, 6, 9 -> setRPosAndReturn(number)
             else -> {
                 val lDist = lPos dist number
                 val rDist = rPos dist number
                 when{
-                    lDist < rDist -> {lPos = number; "L"}
-                    lDist == rDist && hand == "left" -> {lPos = number; "L"}
-                    else -> {rPos = number; "R"}
+                    lDist < rDist -> setLPosAndReturn(number)
+                    lDist == rDist && hand == "left" -> setLPosAndReturn(number)
+                    else -> setRPosAndReturn(number)
                 }
             }
         }

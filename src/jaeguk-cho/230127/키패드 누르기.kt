@@ -10,32 +10,23 @@ class `키패드 누르기` {
     fun solution(numbers: IntArray, hand: String): String {
         var left = Keypad.STAR
         var right = Keypad.HASH
-        val answer = StringBuilder()
-        val moveLeft = { next: Keypad ->
-            left = next
-            answer.append('L')
-        }
-        val moveRight = { next: Keypad ->
-            right = next
-            answer.append('R')
-        }
+        val moveLeft = { next: Keypad -> left = next; "L" }
+        val moveRight = { next: Keypad -> right = next; "R" }
 
-        numbers.map { Keypad.getByKey(it) }.forEach { next ->
+        return numbers.map { Keypad.getByKey(it) }.joinToString("") { next ->
             when {
                 next.isLeft() -> moveLeft(next)
                 next.isRight() -> moveRight(next)
                 left dist next < right dist next -> moveLeft(next)
                 left dist next > right dist next -> moveRight(next)
                 hand == "left" -> moveLeft(next)
-                hand == "right" -> moveRight(next)
+                else -> moveRight(next)
             }
         }
-
-        return answer.toString()
     }
 
     enum class Keypad(
-        val key: Any,
+        val key: Int,
         val location: Pair<Int, Int>,
     ) {
         ONE(1, 0 to 0),

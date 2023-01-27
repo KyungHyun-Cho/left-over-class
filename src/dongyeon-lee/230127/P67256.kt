@@ -3,7 +3,7 @@ package `dongyeon-lee`.`230127`
 import kotlin.math.abs
 
 const val STAR = 10 ; const val HASH = 11 // *, #
-const val RIGHT_HAND = "right" ; const val LEFT_HAND = "left"
+const val RIGHT_HAND = "right"
 class Solution {
     fun solution(numbers: IntArray, hand: String): String {
         val phone = listOf(
@@ -13,11 +13,11 @@ class Solution {
             (3 to 1), (3 to 2), (3 to 3),
             (4 to 1),           (4 to 3)
         )
-        var hands = (phone[STAR] to phone[HASH])
+        val hands = mutableListOf(phone[STAR], phone[HASH])
         return numbers.map { num ->
             val numLoc = phone[num]
-            val leftDst = abs(hands.first.first - numLoc.first) + abs(hands.first.second - numLoc.second)
-            val rightDst = abs(hands.second.first - numLoc.first) + abs(hands.second.second - numLoc.second)
+            val leftDst = abs(hands[0].first - numLoc.first) + abs(hands[0].second - numLoc.second)
+            val rightDst = abs(hands[1].first - numLoc.first) + abs(hands[1].second - numLoc.second)
             when {
                 num in listOf(3,6,9) -> "R"
                 num in listOf(1,4,7) -> "L"
@@ -26,8 +26,8 @@ class Solution {
                 hand == RIGHT_HAND -> "R"
                 else -> "L"
             }.apply {
-                if (this == "R") hands = hands.copy(second = numLoc)
-                else  hands = hands.copy(first = numLoc)
+                if (this == "R") hands[1] = numLoc
+                else  hands[0] = numLoc
             }
         }.joinToString("")
     }

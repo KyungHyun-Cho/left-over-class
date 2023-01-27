@@ -1,3 +1,4 @@
+package `dongyeon-lee`.`230126`
 class Solution {
     fun solution(answers: IntArray): IntArray {
         val one = listOf(1, 2, 3, 4, 5)

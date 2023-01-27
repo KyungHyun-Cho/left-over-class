@@ -7,6 +7,33 @@ import kotlin.math.abs
  */
 
 class `키패드 누르기` {
+    fun solution(numbers: IntArray, hand: String): String {
+        var left = Keypad.STAR
+        var right = Keypad.HASH
+        val answer = StringBuilder()
+        val moveLeft = { next: Keypad ->
+            left = next
+            answer.append('L')
+        }
+        val moveRight = { next: Keypad ->
+            right = next
+            answer.append('R')
+        }
+
+        numbers.map { Keypad.getByKey(it) }.forEach { next ->
+            when {
+                next.isLeft() -> moveLeft(next)
+                next.isRight() -> moveRight(next)
+                left dist next < right dist next -> moveLeft(next)
+                left dist next > right dist next -> moveRight(next)
+                hand == "left" -> moveLeft(next)
+                hand == "right" -> moveRight(next)
+            }
+        }
+
+        return answer.toString()
+    }
+
     enum class Keypad(
         val key: Any,
         val location: Pair<Int, Int>,
@@ -34,34 +61,7 @@ class `키패드 누르기` {
         }
     }
 
-    private fun distance(hand: Keypad, key: Keypad): Int {
-        return abs(hand.location.first - key.location.first) + abs(hand.location.second - key.location.second)
-    }
-
-    fun solution(numbers: IntArray, hand: String): String {
-        var left = Keypad.STAR
-        var right = Keypad.HASH
-        val answer = StringBuilder()
-        val moveLeft = { next: Keypad ->
-            left = next
-            answer.append('L')
-        }
-        val moveRight = { next: Keypad ->
-            right = next
-            answer.append('R')
-        }
-
-        numbers.map { Keypad.getByKey(it) }.forEach { next ->
-            when {
-                next.isLeft() -> moveLeft(next)
-                next.isRight() -> moveRight(next)
-                distance(left, next) < distance(right, next) -> moveLeft(next)
-                distance(left, next) > distance(right, next) -> moveRight(next)
-                hand == "left" -> moveLeft(next)
-                hand == "right" -> moveRight(next)
-            }
-        }
-
-        return answer.toString()
+    private infix fun Keypad.dist(key: Keypad): Int {
+        return abs(location.first - key.location.first) + abs(location.second - key.location.second)
     }
 }

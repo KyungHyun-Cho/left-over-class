@@ -25,10 +25,11 @@ fun solution(numbers: IntArray, hand: String): String {
             else -> {
                 val lDist = lPos dist number
                 val rDist = rPos dist number
+
                 when{
                     lDist < rDist -> setLPosAndReturn(number)
-                    lDist == rDist && hand == "left" -> setLPosAndReturn(number)
-                    else -> setRPosAndReturn(number)
+                    rDist < lDist -> setRPosAndReturn(number)
+                    else -> if(hand == "left") setLPosAndReturn(number) else setRPosAndReturn(number)
                 }
             }
         }

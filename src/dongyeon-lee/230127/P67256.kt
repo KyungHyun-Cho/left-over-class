@@ -16,8 +16,8 @@ class Solution {
         val hands = mutableListOf(phone[STAR], phone[HASH])
         return numbers.map { num ->
             val numLoc = phone[num]
-            val leftDst = abs(hands[0].first - numLoc.first) + abs(hands[0].second - numLoc.second)
-            val rightDst = abs(hands[1].first - numLoc.first) + abs(hands[1].second - numLoc.second)
+            val leftDst = hands[0] dist numLoc
+            val rightDst = hands[1] dist numLoc
             when {
                 num in listOf(3,6,9) -> "R"
                 num in listOf(1,4,7) -> "L"
@@ -30,5 +30,8 @@ class Solution {
                 else  hands[0] = numLoc
             }
         }.joinToString("")
+    }
+    private infix fun Pair<Int, Int>.dist(key: Pair<Int, Int>): Int {
+        return abs(this.first - key.first) + abs(this.second - key.second)
     }
 }

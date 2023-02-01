@@ -13,8 +13,8 @@ fun main() {
 fun solution(lottos: IntArray, win_nums: IntArray): List<Int> {
     val (certain, uncertain) = lottos.partition { it != 0 }
     return certain.count { win_nums.contains(it) }.let { wonCnt ->
-        val min = kotlin.math.min(7 - wonCnt, 6)
-        val max = kotlin.math.max(min - uncertain.size, 1)
+        val min = (7 - wonCnt).coerceAtMost(6)
+        val max = (min - uncertain.size).coerceAtLeast(1)
         listOf(max, min)
     }
 }

@@ -6,5 +6,5 @@ class Solution {
             val maxScore = minScore + lottos.count { it == 0 }
             listOf(maxScore, minScore).map { it.toRank() }
         }
-    fun Int.toRank() = if (this <= 1) 6 else 7 - this
+    fun Int.toRank() = 7 - this.coerceAtLeast(1)
 }

@@ -11,10 +11,19 @@ fun main() {
 }
 
 fun solution(lottos: IntArray, win_nums: IntArray): List<Int> {
-    val (certain, uncertain) = lottos.partition { it != 0 }
-    return certain.count { win_nums.contains(it) }.let { wonCnt ->
-        val min = (7 - wonCnt).coerceAtMost(6)
-        val max = (min - uncertain.size).coerceAtLeast(1)
-        listOf(max, min)
+    val minWinCnt = lottos.count { it in win_nums }
+    val maxWinCnt = minWinCnt + lottos.count { it == 0 }
+
+    return listOf(maxWinCnt, minWinCnt).map { it.toGrade() }
+}
+
+fun Int.toGrade(): Int {
+    return when(this){
+        6 -> 1
+        5 -> 2
+        4 -> 3
+        3 -> 4
+        2 -> 5
+        else -> 6
     }
 }

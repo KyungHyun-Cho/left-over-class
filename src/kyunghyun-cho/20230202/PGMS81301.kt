@@ -6,8 +6,8 @@ package `kyunghyun-cho`.`20230202`
 
 fun main() {
     // val s = "one4seveneight" // 1478
-     val s = "2three45sixseven" // 234567
-    // val s = "threetwooneone" // 3211
+    // val s = "2three45sixseven" // 234567
+     val s = "threetwooneone" // 3211
     println(solution(s))
     println(solutionRegex(s))
 }
@@ -15,7 +15,7 @@ fun main() {
 fun solution(s: String): Int {
     var answer = s
     listOf("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine").forEachIndexed { idx, eng ->
-        answer = answer.replace(eng.toRegex(), idx.toString())
+        answer = answer.replace(eng, idx.toString())
     }
     return answer.toInt()
 }

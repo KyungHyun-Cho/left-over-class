@@ -18,13 +18,5 @@ class `숫자 문자열과 영단어` {
         "nine" to "9",
     )
 
-    fun solution(s: String): Int {
-        var t = s
-
-        dictionary.forEach { (english, number) ->
-            t = t.replace(english, number)
-        }
-
-        return t.toInt()
-    }
+    fun solution(s: String) = dictionary.fold(s) { s, word -> s.replace(word.first, word.second) }.toInt()
 }

@@ -6,5 +6,5 @@ package `jaeguk-cho`.`숫자 문자열과 영단어`
 
 class `숫자 문자열과 영단어` {
     fun solution(s: String) = listOf("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
-        .foldIndexed(s) { idx, s, word -> s.replace(word, idx.toString()) }.toInt()
+        .foldIndexed(s) { num, ans, word -> ans.replace(word, "$num") }.toInt()
 }

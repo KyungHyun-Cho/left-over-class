@@ -9,7 +9,4 @@ fun main() {
     println(solution(s))
 }
 
-fun solution(s: String): Set<Int> {
-    val tuples = "([0-9],?)+".toRegex().findAll(s).toList().map { it.value.split(",").map { it.toInt() }.toSet() }.sortedBy { it.size }
-    return tuples.reduce(Set<Int>::plus)
-}
+fun solution(s: String) = "([0-9],?)+".toRegex().findAll(s).map { it.value.split(",").map { it.toInt() }.toSet() }.sortedBy { it.size }.toSet().reduce(Set<Int>::plus)

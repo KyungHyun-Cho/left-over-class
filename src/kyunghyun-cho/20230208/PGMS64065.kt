@@ -9,11 +9,7 @@ fun main() {
     println(solution(s))
 }
 
-fun solution(s: String): List<Int> {
-    val set = mutableSetOf<Int>()
-    val tuples = "([0-9],*)+".toRegex().findAll(s).toList().map { it.value.split(",").map { it.toInt() }.toSet() }.sortedBy { it.size }
-    tuples.forEach {
-        set.add((it - set).first())
-    }
-    return set.toList()
+fun solution(s: String): Set<Int> {
+    val tuples = "([0-9],?)+".toRegex().findAll(s).toList().map { it.value.split(",").map { it.toInt() }.toSet() }.sortedBy { it.size }
+    return tuples.reduce(Set<Int>::plus)
 }

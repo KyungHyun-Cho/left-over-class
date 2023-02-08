@@ -10,3 +10,9 @@ fun main() {
 }
 
 fun solution(s: String) = "([0-9],?)+".toRegex().findAll(s).map { it.value.split(",").map(String::toInt) }.sortedBy { it.size }.fold(setOf(), Set<Int>::plus)
+
+fun comfortableSolution(s: String) = "([0-9],?)+".toRegex()
+    .findAll(s)
+    .map { it.value.split(",").map(String::toInt) }
+    .sortedBy { it.size }
+    .fold(setOf(), Set<Int>::plus)

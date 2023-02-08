@@ -14,5 +14,5 @@ class Solution {
 
     fun solution2(s: String) = s.split("},{").map {
         it.replace("{", "").replace("}", "").split(",").map { it.toInt() }
-    }.sortedBy { it.size }.fold(setOf<Int>()) { acc, ints -> acc.union(ints) }
+    }.sortedBy { it.size }.fold(setOf<Int>(), Set<Int>::union)
 }

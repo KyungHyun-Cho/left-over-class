@@ -15,7 +15,8 @@ class `주차 요금 계산` {
     }
 
     fun calculate(fees: IntArray, time: Int): Int {
-        return fees[1] + if (time <= fees[0]) 0 else (time - fees[0] + fees[2] - 1) / fees[2] * fees[3]
+        val (dt, df, ut, uf) = fees
+        return df + ((time - dt + ut - 1) / ut * uf).coerceAtLeast(0)
     }
 
     fun String.toUnit(): Int {

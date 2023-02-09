@@ -24,7 +24,7 @@ fun solution(fees: IntArray, records: Array<String>) =
     records.map { it.split(" ") }
         .groupBy({ it[1] }, { it[0].toIntTime() })
         .mapValues { (_, value) -> value.takeIf { it.size % 2 == 0 } ?: (value + (1440 - 1)) }
-        .mapValues { (_, value) -> value.windowed(2, 2)
+        .mapValues { (_, value) -> value.chunked(2)
             .sumOf { (in1, out) -> out - in1 }
             .let { calc(fees, it) }
         }.toSortedMap().values

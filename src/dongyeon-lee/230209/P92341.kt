@@ -30,7 +30,8 @@ class Solution {
             t.calcFinalFee(dTime, dFee, pTime, pFee).toInt()
         }
     }
-    fun String.toMinutes() = split(":").let { it[0].toInt() * 60 + it[1].toInt() }
+    fun String.toMinutes() = split(":").let {(hour, min) -> hour.toInt() * 60 + min.toInt() }
+
     fun Int.calcFinalFee(dTime: Int, dFee: Int, pTime: Int, pFee: Int) =
-        dFee + (ceil(minus(dTime.toDouble()).coerceAtLeast(0.0).div(pTime)))  * pFee
+        dFee + (ceil(this.minus(dTime.toDouble()).coerceAtLeast(0.0).div(pTime)))  * pFee
 }

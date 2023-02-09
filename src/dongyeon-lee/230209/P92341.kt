@@ -10,7 +10,7 @@ class Solution {
         val feeMap = hashMapOf<String, Int>()
 
         records.forEach {
-            val  (t, num, _) = it.split(" ")
+            val (t, num) = it.split(' ')
             val time = t.toMinutes()
             if (parkingMap.containsKey(num)) {
                 val diff = time - parkingMap.getOrDefault(num, 0)

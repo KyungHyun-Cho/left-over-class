@@ -13,7 +13,7 @@ class Solution {
             val  (t, num, _) = it.split(" ")
             val time = t.toMinutes()
             if (parkingMap.containsKey(num)) {
-                val diff = time -parkingMap.getOrDefault(num, 0)
+                val diff = time - parkingMap.getOrDefault(num, 0)
                 feeMap[num] = feeMap.getOrDefault(num, 0).plus(diff)
                 parkingMap.remove(num)
                 return@forEach

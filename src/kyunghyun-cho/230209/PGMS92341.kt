@@ -1,7 +1,5 @@
 package `kyunghyun-cho`.`230209`
 
-import kotlin.math.ceil
-
 /**
  * @author Kyunghyun Cho
  */
@@ -31,7 +29,7 @@ fun solution(fees: IntArray, records: Array<String>) =
 
 fun calc(fees: IntArray, time: Int): Int {
     val (defaultTime, defaultFee, unitTime, unitFee) = fees
-    return defaultFee + (ceil((time - defaultTime) / unitTime.toDouble()) * unitFee).toInt().coerceAtLeast(0)
+    return defaultFee + ((time - defaultTime + unitTime - 1) / unitTime * unitFee).coerceAtLeast(0)
 }
 
 fun String.toIntTime() = this.split(":").map(String::toInt).let { (h, m) -> h * 60 + m }

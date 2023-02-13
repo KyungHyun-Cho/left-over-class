@@ -15,7 +15,7 @@ val PAIR = mapOf(')' to '(', '}' to '{', ']' to '[')
 
 fun solution(s: String): Int {
     val ss = s + s
-    return (s.indices).map { ss.substring(it, it + s.length) }.count { isRight(it) }
+    return s.indices.map { ss.substring(it, it + s.length) }.count { isRight(it) }
 }
 
 fun isRight(s: String): Boolean {

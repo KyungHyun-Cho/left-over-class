@@ -11,29 +11,20 @@ class `괄호 회전하기` {
     fun solution(s: String) = s.indices.count { check(s.drop(it) + s.take(it)) }
 
     fun check(s: String): Boolean {
-        val stack = Stack<Char>()
+        val stack = ArrayDeque<Char>()
 
         s.forEach {
-            when (it) {
-                '(', '{', '[' -> stack.push(it)
-                else -> if (stack.isNotEmpty() && stack.peek() == it.pair()) {
-                    stack.pop()
-                } else {
-                    stack.push(it)
-                }
-            }
+            if (stack.lastOrNull().pair() == it) stack.removeLast()
+            else stack.add(it)
         }
 
         return stack.isEmpty()
     }
 
-    fun Char.pair() = when (this) {
+    fun Char?.pair() = when (this) {
         '(' -> ')'
         '{' -> '}'
         '[' -> ']'
-        ')' -> '('
-        '}' -> '{'
-        ']' -> '['
-        else -> throw Exception()
+        else -> null
     }
 }

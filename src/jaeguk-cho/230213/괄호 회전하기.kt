@@ -1,6 +1,5 @@
 package `jaeguk-cho`.`괄호 회전하기`
 
-
 import java.util.*
 
 /**

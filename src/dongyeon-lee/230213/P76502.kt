@@ -1,15 +1,7 @@
 package `dongyeon-lee`.`230208`
 
 class Solution {
-    fun solution(s: String): Int {
-        var answer = 0
-        (s.indices).fold(s) { acc, index ->
-            val rotated = acc.substring(index)
-            if (rotated.checkIsCorrect()) answer++
-            acc + acc[index]
-        }
-        return answer
-    }
+    fun solution(s: String) = s.indices.count { (s.drop(it) + s.take(it)).checkIsCorrect() }
 
     fun String.checkIsCorrect(): Boolean {
         val deque = ArrayDeque<Char>()

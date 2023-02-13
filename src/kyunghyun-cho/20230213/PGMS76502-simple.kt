@@ -23,11 +23,8 @@ fun isRight(s: String): Boolean {
 
     return ArrayDeque<Char>().apply {
         s.forEach { c ->
-            if (c in OPEN_CHAR) {
-                this.addLast(c)
-            } else if (this.removeLastOrNull() != pair[c]) {
-                return false
-            }
+            if (c in OPEN_CHAR) this.addLast(c)
+            else if (this.removeLastOrNull() != pair[c]) return false
         }
     }.isEmpty()
 }

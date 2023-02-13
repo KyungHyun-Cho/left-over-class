@@ -11,7 +11,7 @@ fun main() {
 
 val OPEN_CHAR = setOf('(', '{', '[')
 val CLOSE_CHAR = setOf(')', '}', ']')
-val pair = mapOf(')' to '(', '}' to '{', ']' to '[')
+val PAIR = mapOf(')' to '(', '}' to '{', ']' to '[')
 
 fun solution(s: String): Int {
     val ss = s + s
@@ -24,7 +24,7 @@ fun isRight(s: String): Boolean {
     return ArrayDeque<Char>().apply {
         s.forEach { c ->
             if (c in OPEN_CHAR) this.addLast(c)
-            else if (this.removeLastOrNull() != pair[c]) return false
+            else if (this.removeLastOrNull() != PAIR[c]) return false
         }
     }.isEmpty()
 }

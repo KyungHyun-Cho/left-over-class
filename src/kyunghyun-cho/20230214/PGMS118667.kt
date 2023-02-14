@@ -11,10 +11,10 @@ fun main() {
 }
 
 fun solution(queue1: IntArray, queue2: IntArray): Int {
-    var (sum1, sum2) = queue1.sum() to queue2.sum()
+    var (sum1, sum2) = queue1.sum().toLong() to queue2.sum().toLong()
     var answer = 0
-    val dq1 = ArrayDeque<Int>().apply { this.addAll(queue1.toList()) }
-    val dq2 = ArrayDeque<Int>().apply { this.addAll(queue2.toList()) }
+    val dq1 = ArrayDeque<Long>().apply { this.addAll(queue1.map(Int::toLong)) }
+    val dq2 = ArrayDeque<Long>().apply { this.addAll(queue2.map(Int::toLong)) }
     repeat(queue1.size * 2) {
         if (sum1 < sum2) {
             val target = dq2.removeFirst()

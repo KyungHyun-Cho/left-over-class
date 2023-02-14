@@ -10,12 +10,12 @@ class Solution {
         while (answer <= queue1.size * 2 + 10) {
             if (sumOfq1 > sumOfq2) {
                 val element = q1.removeFirst()
-                q2.addLast(element)
+                q2.add(element)
                 sumOfq1 -= element
                 sumOfq2 += element
             } else if (sumOfq2 > sumOfq1) {
                 val element = q2.removeFirst()
-                q1.addLast(element)
+                q1.add(element)
                 sumOfq2 -= element
                 sumOfq1 += element
             } else return answer

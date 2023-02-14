@@ -5,8 +5,8 @@ class Solution {
         var answer: Int = 0
         val q1 = ArrayDeque(queue1.toList())
         val q2 = ArrayDeque(queue2.toList())
-        var sumOfq1 = q1.sum().toLong()
-        var sumOfq2 = q2.sum().toLong()
+        var sumOfq1 = q1.sumOf { it.toLong() }
+        var sumOfq2 = q2.sumOf { it.toLong() }
         while (answer <= queue1.size * 2 + 10) {
             if (sumOfq1 > sumOfq2) {
                 val element = q1.removeFirst()

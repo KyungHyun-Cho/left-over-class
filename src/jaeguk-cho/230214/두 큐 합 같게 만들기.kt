@@ -6,28 +6,30 @@ package `jaeguk-cho`.`두 큐 합 같게 만들기`
 
 class `두 큐 합 같게 만들기` {
     fun solution(queue1: IntArray, queue2: IntArray): Int {
+        val maxCount = queue1.size * 2
         val queueA = ArrayDeque(queue1.toList())
         val queueB = ArrayDeque(queue2.toList())
         var sizeA = queueA.sum().toLong()
         var sizeB = queueB.sum().toLong()
         var answer = 0
 
-        while (sizeA != sizeB) {
+        while (answer != maxCount && sizeA != sizeB) {
             if (sizeA > sizeB) {
                 sizeA -= queueA.first()
                 sizeB += queueA.first()
-                queueB.add(queueA.removeFirst())
-                answer++
+                queueA transfer queueB
             } else {
                 sizeA += queueB.first()
                 sizeB -= queueB.first()
-                queueA.add(queueB.removeFirst())
-                answer++
+                queueB transfer queueA
             }
-
-            if (answer == queue1.size * 2) break
+            answer++
         }
 
-        return answer.takeIf { it != queue1.size * 2 } ?: -1
+        return answer.takeIf { it != maxCount } ?: -1
+    }
+
+    private infix fun <T> ArrayDeque<T>.transfer(that: ArrayDeque<T>) {
+        that.add(this.removeFirst())
     }
 }

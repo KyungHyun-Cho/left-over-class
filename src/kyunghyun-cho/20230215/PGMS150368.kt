@@ -1,6 +1,5 @@
 package `kyunghyun-cho`.`20230215`
 
-import kotlin.math.ceil
 import kotlin.math.pow
 
 /**
@@ -24,8 +23,7 @@ fun main() {
 
 fun solution(users: Array<IntArray>, emoticons: IntArray): IntArray {
     val answer = intArrayOf(0, 0)
-    val discountPool = users.map { (ceil(it[0] / 10.0) * 10).toInt() }
-    combinationsWithRepetition(discountPool, emoticons.size).forEach { discountRates ->
+    combinationsWithRepetition(listOf(10, 20, 30, 40), emoticons.size).forEach { discountRates ->
         users.map { (buyRate, subscribePrice) ->
             subscribePrice to
             discountRates.withIndex()

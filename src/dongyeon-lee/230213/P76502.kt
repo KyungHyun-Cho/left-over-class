@@ -1,4 +1,4 @@
-package `dongyeon-lee`.`230208`
+package `dongyeon-lee`.`230213`
 
 class Solution {
     fun solution(s: String) = s.indices.count { (s.drop(it) + s.take(it)).checkIsCorrect() }

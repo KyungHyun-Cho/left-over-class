@@ -5,5 +5,5 @@ package `jaeguk-cho`.`JadenCase 문자열 만들기`
  */
 
 class `JadenCase 문자열 만들기` {
-    fun solution(s: String) = s.split(' ').map { it.lowercase().capitalize() }.joinToString(" ")
+    fun solution(s: String) = s.split(' ').joinToString(' ') { it.lowercase().capitalize() }
 }

@@ -12,8 +12,7 @@ fun main() {
 
 fun solution(progresses: IntArray, speeds: IntArray): List<Int> {
     var lastMax = 0
-    return progresses.zip(speeds)
-        .map { (p, s) -> ((100 - p) + s - 1) / s }
+    return progresses.zip(speeds) { p, s -> ((100 - p) + s - 1) / s }
         .fold(mutableListOf()) { acc, value ->
             acc.apply {
                 if (value > lastMax) this.add(1).also { lastMax = value }

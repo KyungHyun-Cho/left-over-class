@@ -6,11 +6,11 @@ class Solution {
         var answer = 0
         var count = 0
         tangerine.groupBy { it }
-            .map { it.key to it.value.size }
-            .sortedByDescending { it.second }
+            .map { it.value.size }
+            .sortedByDescending { it }
             .onEach {
                 if (count < k) {
-                    count += it.second ; answer ++
+                    count += it ; answer ++
                 }
             }
         return answer

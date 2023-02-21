@@ -9,6 +9,7 @@ fun main() {
     println(solution(citations))
 }
 
-fun solution(citations: IntArray): Int {
-    return citations.toSet().filter { a -> citations.count { it >= a } == citations.count { it <= a } }.maxOrNull()!!
-}
+fun solution(citations: IntArray) =
+    citations.toSet()
+        .filter { citation -> citations.count { it >= citation } == citations.count { it <= citation } }
+        .maxOrNull()!!

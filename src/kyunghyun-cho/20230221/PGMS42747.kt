@@ -5,17 +5,13 @@ package `kyunghyun-cho`.`20230221`
  */
 
 fun main() {
-    val citations = intArrayOf(3, 0, 6, 1, 5) // 3
+    //val citations = intArrayOf(3, 0, 6, 1, 5) // 3
+    val citations = intArrayOf(6,6,6,6,6) // 5
+
     println(solution(citations))
-    println(fastSolution(citations))
 }
 
 fun solution(citations: IntArray) =
-    citations.toSet()
-        .filter { citation -> citations.count { it >= citation } == citations.count { it <= citation } }
-        .maxOrNull()!!
-
-fun fastSolution(citations: IntArray) =
-    citations.toSortedSet()
-        .last { citation -> citations.count { it >= citation } == citations.count { it <= citation } }
+    (1..citations.size)
+        .last { citation -> citations.count { it >= citation } >= citation  }
 

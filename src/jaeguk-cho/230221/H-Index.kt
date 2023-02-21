@@ -5,9 +5,6 @@ package `jaeguk-cho`.`H-Index`
  */
 
 class `H-Index` {
-    fun solution(citations: IntArray): Int {
-        return (1..citations.size).maxOf {
-            if (citations.count { c -> c >= it } >= it) it else 0
-        }
-    }
+    fun solution(citations: IntArray) = (1..citations.size)
+        .maxOf { h -> h.takeIf { citations.count { it >= h } >= h } ?: 0 }
 }

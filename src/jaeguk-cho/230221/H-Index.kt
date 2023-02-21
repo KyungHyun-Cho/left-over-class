@@ -5,5 +5,5 @@ package `jaeguk-cho`.`H-Index`
  */
 
 class `H-Index` {
-    fun solution(citations: IntArray) = (1..citations.size).last { h -> citations.count { it >= h } >= h }
+    fun solution(citations: IntArray) = (0..citations.size).last { h -> citations.count { it >= h } >= h }
 }

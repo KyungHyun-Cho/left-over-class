@@ -12,6 +12,6 @@ fun main() {
 }
 
 fun solution(citations: IntArray) =
-    (1..citations.size)
+    (0..citations.size)
         .last { citation -> citations.count { it >= citation } >= citation  }
 

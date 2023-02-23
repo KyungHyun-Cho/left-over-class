@@ -13,8 +13,10 @@ fun main(){
 }
 
 fun solution(want: Array<String>, number: IntArray, discount: Array<String>): Int {
-    val map = (want zip number.toList()).toMap()
-    val t = discount.toList().windowed(10).map { it.groupingBy { it }.eachCount() }
-    return t.count { tt -> map.all { (wantItem, wantCnt) -> tt.getOrDefault(wantItem, 0) >= wantCnt } }
-
+    val cntByWantItems = (want zip number.toList())
+    return discount.toList().windowed(10)
+        .map { discountTargets -> discountTargets.groupingBy { it }.eachCount() }
+        .count { discountTargets ->
+            cntByWantItems.all { (wantItem, wantCnt) -> discountTargets.getOrDefault(wantItem, 0) >= wantCnt }
+        }
 }

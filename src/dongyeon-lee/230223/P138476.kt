@@ -4,7 +4,7 @@ package `dongyeon-lee`.`230223`
 class Solution {
     fun solution(want: Array<String>, number: IntArray, discount: Array<String>) =
         discount.toList().windowed(10).count { window ->
-            val count = window.groupBy { it }.entries.associate { it.key to it.value.count() }
+            val count = window.groupingBy { it }.eachCount()
             want.filterIndexed { index, s -> count[s] == number[index] }.size == want.size
         }
 }

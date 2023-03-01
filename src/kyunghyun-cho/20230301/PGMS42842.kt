@@ -8,6 +8,7 @@ fun main() {
     val (brown, yellow) = 24 to 24
     println(solution(brown, yellow))
     println(fastSolution(brown, yellow))
+    println(prettyFastSolution(brown, yellow))
 }
 
 fun solution(brown: Int, yellow: Int) =
@@ -15,13 +16,18 @@ fun solution(brown: Int, yellow: Int) =
         .first { (f, s) -> (f * s == brown + yellow) && ((f + s) * 2 - 4 == brown) }
         .toList()
 
-fun fastSolution(brown: Int, yellow: Int): List<Int>{
+fun fastSolution(brown: Int, yellow: Int): List<Int> {
     (kotlin.math.ceil(kotlin.math.sqrt((brown.toDouble() + yellow))).toInt()..5000).forEach { w ->
-        for(h in w downTo 1) {
-            if(w*h < brown + yellow) break
-            if((w * h == brown + yellow) && ((w + h) * 2 - 4 == brown)) return listOf(w, h)
+        for (h in w downTo 1) {
+            if (w * h < brown + yellow) break
+            if ((w * h == brown + yellow) && ((w + h) * 2 - 4 == brown)) return listOf(w, h)
         }
     }
     return emptyList()
 }
 
+fun prettyFastSolution(brown: Int, yellow: Int): List<Int> {
+    return (1..5000).first { w ->
+        (w downTo (brown + yellow) / w).any { h -> (w * h == brown + yellow) && ((w + h) * 2 - 4 == brown) }
+    }.let { listOf(it, (brown + yellow) / it) }
+}

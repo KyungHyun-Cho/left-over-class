@@ -9,6 +9,8 @@ fun main() {
     println(solution(brown, yellow))
     println(fastSolution(brown, yellow))
     println(prettyFastSolution(brown, yellow))
+    println(superFastSolution(brown, yellow))
+    println(superFastPrettySolution(brown, yellow))
 }
 
 fun solution(brown: Int, yellow: Int) =
@@ -33,10 +35,21 @@ fun prettyFastSolution(brown: Int, yellow: Int): List<Int> {
 }
 
 fun superFastSolution(brown: Int, yellow: Int): List<Int> {
-    return (1..5000).first { w ->
+    return (1..(brown+yellow)).first { w ->
         if ((brown + yellow) % w != 0) return@first false
         val h = (brown + yellow) / w
         if (w < h) return@first false
         (w * h == brown + yellow) && ((w + h) * 2 - 4 == brown)
     }.let { listOf(it, (brown + yellow) / it) }
+}
+
+fun superFastPrettySolution(brown: Int, yellow: Int): List<Int> {
+    return (1..(brown+yellow))
+        .asSequence()
+        .filter { (brown + yellow) % it == 0 }
+        .filter { it >= (brown + yellow) / it }
+        .first { w ->
+            val h = (brown + yellow) / w
+            (w * h == brown + yellow) && ((w + h) * 2 - 4 == brown)
+        }.let { listOf(it, (brown + yellow) / it) }
 }

@@ -35,7 +35,7 @@ fun prettyFastSolution(brown: Int, yellow: Int): List<Int> {
 }
 
 fun superFastSolution(brown: Int, yellow: Int): List<Int> {
-    return (1..(brown+yellow)).first { w ->
+    return (1..(brown + yellow)).first { w ->
         if ((brown + yellow) % w != 0) return@first false
         val h = (brown + yellow) / w
         if (w < h) return@first false
@@ -43,11 +43,9 @@ fun superFastSolution(brown: Int, yellow: Int): List<Int> {
     }.let { listOf(it, (brown + yellow) / it) }
 }
 
-fun superFastPrettySolution(brown: Int, yellow: Int): List<Int> {
-    return (1..(brown+yellow))
-        .filter { (brown + yellow) % it == 0 }
+fun superFastPrettySolution(brown: Int, yellow: Int) =
+    (1..(brown + yellow))
         .first { h ->
             val w = (brown + yellow) / h
-            (w + h) * 2 - 4 == brown
+            w * h == (brown + yellow) && (w + h) * 2 - 4 == brown
         }.let { listOf((brown + yellow) / it, it) }
-}

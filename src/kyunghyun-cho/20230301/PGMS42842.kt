@@ -16,8 +16,9 @@ fun solution(brown: Int, yellow: Int) =
         .toList()
 
 fun fastSolution(brown: Int, yellow: Int): List<Int>{
-    (1..5000).forEach { w ->
-        (1..w).forEach { h ->
+    (kotlin.math.ceil(kotlin.math.sqrt((brown.toDouble() + yellow))).toInt()..5000).forEach { w ->
+        for(h in w downTo 1) {
+            if(w*h < brown + yellow) break
             if((w * h == brown + yellow) && ((w + h) * 2 - 4 == brown)) return listOf(w, h)
         }
     }

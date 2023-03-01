@@ -45,7 +45,6 @@ fun superFastSolution(brown: Int, yellow: Int): List<Int> {
 
 fun superFastPrettySolution(brown: Int, yellow: Int): List<Int> {
     return (1..(brown+yellow))
-        .asSequence()
         .filter { (brown + yellow) % it == 0 }
         .first { h ->
             val w = (brown + yellow) / h

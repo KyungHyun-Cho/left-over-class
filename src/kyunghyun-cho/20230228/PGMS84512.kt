@@ -22,7 +22,7 @@ fun rec(find: String, picked: MutableList<Char>) {
     if (picked.joinToString("") == find) {
         throw Exception()
     } else {
-        list.forEachIndexed { idx, ch ->
+        list.forEach { ch ->
             if (picked.size == 5) {
                 picked.removeLast()
                 return

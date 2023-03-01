@@ -47,9 +47,8 @@ fun superFastPrettySolution(brown: Int, yellow: Int): List<Int> {
     return (1..(brown+yellow))
         .asSequence()
         .filter { (brown + yellow) % it == 0 }
-        .filter { it >= (brown + yellow) / it }
-        .first { w ->
-            val h = (brown + yellow) / w
+        .first { h ->
+            val w = (brown + yellow) / h
             (w + h) * 2 - 4 == brown
-        }.let { listOf(it, (brown + yellow) / it) }
+        }.let { listOf((brown + yellow) / it, it) }
 }

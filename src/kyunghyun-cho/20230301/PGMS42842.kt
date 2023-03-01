@@ -31,3 +31,12 @@ fun prettyFastSolution(brown: Int, yellow: Int): List<Int> {
         (w downTo (brown + yellow) / w).any { h -> (w * h == brown + yellow) && ((w + h) * 2 - 4 == brown) }
     }.let { listOf(it, (brown + yellow) / it) }
 }
+
+fun superFastSolution(brown: Int, yellow: Int): List<Int> {
+    return (1..5000).first { w ->
+        if ((brown + yellow) % w != 0) return@first false
+        val h = (brown + yellow) / w
+        if (w < h) return@first false
+        (w * h == brown + yellow) && ((w + h) * 2 - 4 == brown)
+    }.let { listOf(it, (brown + yellow) / it) }
+}

@@ -31,10 +31,10 @@ fun stillSlowSolution(topping: IntArray): Int {
 
 fun solution(topping: IntArray): Int {
     val one = topping.toList().groupingBy { it }.eachCount().toMutableMap()
-    val two = mutableMapOf<Int, Int>()
+    val two = mutableSetOf<Int>()
 
     return topping.fold(0) { acc, i ->
-        two[i] = two.getOrDefault(i, 0) + 1
+        two.add(i)
         if (one[i] == 1) one.remove(i) else one[i] = one.getValue(i) - 1
         if (one.size == two.size) acc + 1 else acc
     }

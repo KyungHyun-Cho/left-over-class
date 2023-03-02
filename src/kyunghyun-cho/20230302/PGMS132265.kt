@@ -42,6 +42,5 @@ fun solution(topping: IntArray): Int {
 
 private fun MutableMap<Int, Int>.moveTo(target: MutableMap<Int, Int>, tg: Int) {
     target[tg] = target.getOrDefault(tg, 0) + 1
-    this[tg] = this[tg]!! - 1
-    if (this[tg] == 0) this.remove(tg)
+    if (this[tg] == 1) this.remove(tg) else this[tg] = this.getValue(tg) - 1
 }

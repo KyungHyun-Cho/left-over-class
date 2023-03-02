@@ -4,7 +4,7 @@ package `dongyeon-lee`.`230223`
 class Solution {
     fun solution(topping: IntArray): Int {
         val chul = mutableSetOf<Int>()
-        val bro = val bro = topping.groupingBy { it }.eachCount().toMutableMap()
+        val bro = topping.groupingBy { it }.eachCount().toMutableMap()
         return topping.fold(0) { acc, t ->
             chul.add(t)
             if (bro.contains(t)) {

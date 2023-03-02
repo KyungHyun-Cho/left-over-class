@@ -9,8 +9,8 @@ class `롤케이크 자르기` {
         val list1 = mutableSetOf<Int>()
         val list2 = mutableSetOf<Int>()
 
-        val left = topping.map { list1 += it; list1.size }.dropLast(1)
-        val right = topping.reversed().map { list2 += it; list2.size }.reversed().drop(1)
+        val left = topping.map { list1 += it; list1.size }.reversed().drop(1)
+        val right = topping.reversed().map { list2 += it; list2.size }.dropLast(1)
 
         return left.zip(right, Int::equals).count { it }
     }

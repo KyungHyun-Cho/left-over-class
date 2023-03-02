@@ -34,13 +34,8 @@ fun solution(topping: IntArray): Int {
     val two = mutableMapOf<Int, Int>()
 
     return topping.fold(0){acc, i ->
-        one.moveTo(two, i)
+        two[i] = two.getOrDefault(i, 0) + 1
+        if (one[i] == 1) one.remove(i) else one[i] = one.getValue(i) - 1
         if(one.size == two.size) acc + 1 else acc
     }
-}
-
-
-private fun MutableMap<Int, Int>.moveTo(target: MutableMap<Int, Int>, tg: Int) {
-    target[tg] = target.getOrDefault(tg, 0) + 1
-    if (this[tg] == 1) this.remove(tg) else this[tg] = this.getValue(tg) - 1
 }

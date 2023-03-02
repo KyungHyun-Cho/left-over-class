@@ -1,10 +1,10 @@
 package `dongyeon-lee`.`230223`
 
-* 롤케이크 자르기 */
+/* 롤케이크 자르기 */
 class Solution {
     fun solution(topping: IntArray): Int {
         val chul = mutableSetOf<Int>()
-        val bro = topping.groupBy { it }.map { it.key to it.value.size }.toMap().toMutableMap()
+        val bro = val bro = topping.groupingBy { it }.eachCount().toMutableMap()
         return topping.fold(0) { acc, t ->
             chul.add(t)
             if (bro.contains(t)) {

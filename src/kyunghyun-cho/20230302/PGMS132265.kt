@@ -33,12 +33,10 @@ fun solution(topping: IntArray): Int {
     val one = topping.toList().groupingBy { it }.eachCount().toMutableMap()
     val two = mutableMapOf<Int, Int>()
 
-    var answer = 0
-    topping.forEach {
-        one.moveTo(two, it)
-        if (one.size == two.size) answer++
+    return topping.fold(0){acc, i ->
+        one.moveTo(two, i)
+        if(one.size == two.size) acc + 1 else acc
     }
-    return answer
 }
 
 

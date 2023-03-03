@@ -12,19 +12,12 @@ fun main() {
 }
 
 fun solution(number: String, k: Int): String {
-    var vk = k
     val origin = ArrayDeque<Char>().apply { this.addAll(number.toCharArray().toList()) }
     val answer = ArrayDeque<Char>()
-
     while (origin.isNotEmpty()) {
-        if (vk != 0 && answer.isNotEmpty() && answer.last() < origin.first()) {
-            answer.removeLast()
-            vk--
-        } else {
-            answer.addLast(origin.removeFirst())
-        }
+        if (origin.size + answer.size + k > number.length && answer.isNotEmpty() && answer.last() < origin.first()) answer.removeLast()
+        else answer.addLast(origin.removeFirst())
     }
-
     return answer.take(number.length - k).joinToString("")
 }
 

@@ -1,10 +1,10 @@
-package `jaeguk-cho`.`기능개발`
+package `jaeguk-cho`.`230217`
 
 /**
  * @author Jaeguk Cho
  */
 
-class `기능개발` {
+class Solution {
     fun solution(progresses: IntArray, speeds: IntArray): List<Int> {
         val answer = mutableListOf<Int>()
         val stack = ArrayDeque<Int>()

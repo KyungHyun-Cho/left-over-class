@@ -1,10 +1,10 @@
-package `jaeguk-cho`.`괄호 회전하기`
+package `jaeguk-cho`.`230213`
 
 /**
  * @author Jaeguk Cho
  */
 
-class `괄호 회전하기` {
+class Solution {
     fun solution(s: String) = s.indices.count { check(s.drop(it) + s.take(it)) }
 
     fun check(s: String) = with(ArrayDeque<Char>()) {

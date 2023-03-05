@@ -1,10 +1,10 @@
-package `jaeguk-cho`.`롤케이크 자르기`
+package `jaeguk-cho`.`230302`
 
 /**
  * @author Jaeguk Cho
  */
 
-class `롤케이크 자르기` {
+class Solution {
     fun solution(topping: IntArray): Int {
         val list1 = mutableSetOf<Int>()
         val list2 = mutableSetOf<Int>()

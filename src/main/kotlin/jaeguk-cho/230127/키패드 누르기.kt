@@ -1,4 +1,4 @@
-package `jaeguk-cho`.`키패드 누르기`
+package `jaeguk-cho`.`230127`
 
 import kotlin.math.abs
 
@@ -6,7 +6,7 @@ import kotlin.math.abs
  * @author Jaeguk Cho
  */
 
-class `키패드 누르기` {
+class Solution {
     fun solution(numbers: IntArray, hand: String): String {
         var left = Keypad.STAR
         var right = Keypad.HASH

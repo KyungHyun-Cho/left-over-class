@@ -1,10 +1,10 @@
-package `jaeguk-cho`.`모의고사`
+package `jaeguk-cho`.`230126`
 
 /**
  * @author Jaeguk Cho
  */
 
-class `모의고사` {
+class Solution {
     fun Sequence<Int>.repeat() = sequence { while (true) yieldAll(this@repeat) }
 
     fun solution(answers: IntArray) = listOf(

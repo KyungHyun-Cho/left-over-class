@@ -1,10 +1,10 @@
-package `jaeguk-cho`.`모음사전`
+package `jaeguk-cho`.`230228`
 
 /**
  * @author Jaeguk Cho
  */
 
-class `모음사전` {
+class Solution {
     val vowels = listOf('A', 'E', 'I', 'O', 'U')
 
     fun getStringByLength(length: Int, prefix: String = ""): List<String> {

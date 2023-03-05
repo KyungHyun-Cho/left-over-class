@@ -1,10 +1,10 @@
-package `jaeguk-cho`.`호텔 대실`
+package `jaeguk-cho`.`230206`
 
 /**
  * @author Jaeguk Cho
  */
 
-class `호텔 대실` {
+class Solution {
     fun solution(book_time: Array<Array<String>>): Int {
         val time = MutableList(1450) { 0 }
         book_time.forEach { (s, e) ->

@@ -1,10 +1,10 @@
-package `jaeguk-cho`.`주차 요금 계산`
+package `jaeguk-cho`.`230209`
 
 /**
  * @author Jaeguk Cho
  */
 
-class `주차 요금 계산` {
+class Solution {
     fun solution(fees: IntArray, records: Array<String>): List<Int> {
         return (0 until 10000).map { carNo ->
             records.filter { it.substringAfter(' ').substringBefore(' ').toInt() == carNo }

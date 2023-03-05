@@ -1,10 +1,10 @@
-package `jaeguk-cho`.`두 큐 합 같게 만들기`
+package `jaeguk-cho`.`230214`
 
 /**
  * @author Jaeguk Cho
  */
 
-class `두 큐 합 같게 만들기` {
+class Solution {
     fun solution(queue1: IntArray, queue2: IntArray): Int {
         val maxCount = queue1.size * 2 + 3
         val queueA = ArrayDeque(queue1.toList())

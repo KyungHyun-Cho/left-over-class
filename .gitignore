@@ -1,13 +1,5 @@
-HELP.md
-.gradle
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**
-!**/src/test/**
-logs/
-**/.gradle/
-/.gradle/
-.idea
+
+### IntelliJ IDEA ###
 *.iws
 *.ipr
 out/

@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="625ec110-dfa8-4c0c-a9d1-dea2be1e8b4c" name="Changes" comment="fix compile?">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jaeguk-cho/230216/JadenCase 문자열 만들기.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jaeguk-cho/230216/JadenCase 문자열 만들기.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="4" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="fix-compile" />
+                    <option name="lastUsedInstant" value="1678020499" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1678020488" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="kh-230303" />
+                    <option name="lastUsedInstant" value="1677847752" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="kh-230302" />
+                    <option name="lastUsedInstant" value="1677759579" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="kh-230301" />
+                    <option name="lastUsedInstant" value="1677677755" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="master" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KrZvWACiMgVtL5BlyLPu4ISRmt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/kyunghyun-cho/20230214" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/kyunghyun-cho/20230214" />
+      <recent name="$PROJECT_DIR$/src/kyunghyun-cho" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Kotlin.PGMS42586Kt">
+    <configuration name="PGMS42586Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kyunghyun-cho.20230217.PGMS42586Kt" />
+      <module name="left-over-class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PGMS64061Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kyunghyun-cho.20230124.PGMS64061Kt" />
+      <module name="left-over-class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PGMS67256Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kyunghyun-cho.20230127.PGMS67256Kt" />
+      <module name="left-over-class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PGMS77484Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kyunghyun-cho.20230201.PGMS77484Kt" />
+      <module name="left-over-class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PGMS92341Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kyunghyun-cho.230209.PGMS92341Kt" />
+      <module name="left-over-class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.PGMS42586Kt" />
+        <item itemvalue="Kotlin.PGMS92341Kt" />
+        <item itemvalue="Kotlin.PGMS77484Kt" />
+        <item itemvalue="Kotlin.PGMS67256Kt" />
+        <item itemvalue="Kotlin.PGMS64061Kt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="625ec110-dfa8-4c0c-a9d1-dea2be1e8b4c" name="Changes" comment="" />
+      <created>1674734893376</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1674734893376</updated>
+      <workItem from="1674734898314" duration="516000" />
+      <workItem from="1674735435570" duration="8259000" />
+      <workItem from="1674822641099" duration="6513000" />
+      <workItem from="1675251193008" duration="8954000" />
+      <workItem from="1675579589975" duration="2062000" />
+      <workItem from="1675687384109" duration="3921000" />
+      <workItem from="1675769835637" duration="2246000" />
+      <workItem from="1675839075823" duration="5118000" />
+      <workItem from="1675942561811" duration="6246000" />
+      <workItem from="1676289859219" duration="6684000" />
+      <workItem from="1676376175326" duration="6009000" />
+      <workItem from="1676462768944" duration="10709000" />
+      <workItem from="1676635502175" duration="11036000" />
+      <workItem from="1676981186094" duration="2128000" />
+      <workItem from="1677111501194" duration="597000" />
+      <workItem from="1677152407677" duration="4279000" />
+      <workItem from="1677587702317" duration="5099000" />
+      <workItem from="1677594274099" duration="491000" />
+      <workItem from="1677648206756" duration="12872000" />
+      <workItem from="1677756439147" duration="5553000" />
+      <workItem from="1677847476521" duration="2329000" />
+      <workItem from="1677992962070" duration="1924000" />
+    </task>
+    <task id="LOCAL-00039" summary="init commit">
+      <created>1676376884552</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1676376884552</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Long타입을 고려합니다">
+      <created>1676377202298</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1676377202298</updated>
+    </task>
+    <task id="LOCAL-00041" summary="빠른버전 추가">
+      <created>1676378036527</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1676378036527</updated>
+    </task>
+    <task id="LOCAL-00042" summary="간결한 버전 추가">
+      <created>1676378234666</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1676378234666</updated>
+    </task>
+    <task id="LOCAL-00043" summary="더 간결한 버전 추가">
+      <created>1676378411300</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1676378411300</updated>
+    </task>
+    <task id="LOCAL-00044" summary="덱 안은 Long 고려 ㄴㄴ">
+      <created>1676378491257</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1676378491257</updated>
+    </task>
+    <task id="LOCAL-00045" summary="init commit">
+      <created>1676466168702</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1676466168702</updated>
+    </task>
+    <task id="LOCAL-00046" summary="조금이라도 덜 걸리게">
+      <created>1676466756963</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1676466756963</updated>
+    </task>
+    <task id="LOCAL-00047" summary="부질없다">
+      <created>1676466863988</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1676466863988</updated>
+    </task>
+    <task id="LOCAL-00048" summary="변수명이나 이쁘게,,">
+      <created>1676468485733</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1676468485733</updated>
+    </task>
+    <task id="LOCAL-00049" summary="init commit">
+      <created>1676550774828</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1676550774828</updated>
+    </task>
+    <task id="LOCAL-00050" summary="init commit">
+      <created>1676637491091</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1676637491091</updated>
+    </task>
+    <task id="LOCAL-00051" summary="코드 컨벤션">
+      <created>1676639014176</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1676639014176</updated>
+    </task>
+    <task id="LOCAL-00052" summary="zip 에서 람다식으로 변환까지 하기">
+      <created>1676640500056</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1676640500056</updated>
+    </task>
+    <task id="LOCAL-00053" summary="init commit">
+      <created>1676729045128</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1676729045128</updated>
+    </task>
+    <task id="LOCAL-00054" summary="init commit">
+      <created>1676981631270</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1676981631271</updated>
+    </task>
+    <task id="LOCAL-00055" summary="가독성">
+      <created>1676981829412</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1676981829412</updated>
+    </task>
+    <task id="LOCAL-00056" summary="빠른버전">
+      <created>1676981976219</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1676981976219</updated>
+    </task>
+    <task id="LOCAL-00057" summary="다시품 ㅎㅎ">
+      <created>1676982721833</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1676982721833</updated>
+    </task>
+    <task id="LOCAL-00058" summary="init commit">
+      <created>1677153054344</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1677153054345</updated>
+    </task>
+    <task id="LOCAL-00059" summary="리팩토링">
+      <created>1677153334297</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1677153334297</updated>
+    </task>
+    <task id="LOCAL-00060" summary="빠른버전?">
+      <created>1677154250239</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1677154250239</updated>
+    </task>
+    <task id="LOCAL-00061" summary="라인 수나 짧게 가져가쟈,,">
+      <created>1677155240086</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1677155240086</updated>
+    </task>
+    <task id="LOCAL-00062" summary="범위조정">
+      <created>1677156266323</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1677156266323</updated>
+    </task>
+    <task id="LOCAL-00063" summary="하남자 코드">
+      <created>1677657506965</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1677657506966</updated>
+    </task>
+    <task id="LOCAL-00064" summary="광기 솔루션 츄가">
+      <created>1677657953561</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1677657953561</updated>
+    </task>
+    <task id="LOCAL-00065" summary="아숩,,">
+      <created>1677658471503</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1677658471503</updated>
+    </task>
+    <task id="LOCAL-00066" summary="init commit">
+      <created>1677673133044</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1677673133044</updated>
+    </task>
+    <task id="LOCAL-00067" summary="일단 최적화">
+      <created>1677673717061</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1677673717061</updated>
+    </task>
+    <task id="LOCAL-00068" summary="일단빠른버전">
+      <created>1677674330480</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1677674330480</updated>
+    </task>
+    <task id="LOCAL-00069" summary="내가 할 수 있는 제일 빠른 버전">
+      <created>1677674894974</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1677674894974</updated>
+    </task>
+    <task id="LOCAL-00070" summary="이쁘면서 빠른 버전">
+      <created>1677675278558</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1677675278558</updated>
+    </task>
+    <task id="LOCAL-00071" summary="진짜빠른버전">
+      <created>1677675733996</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1677675733996</updated>
+    </task>
+    <task id="LOCAL-00072" summary="진짜빠르고이쁜버전">
+      <created>1677676510932</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1677676510932</updated>
+    </task>
+    <task id="LOCAL-00073" summary="bb">
+      <created>1677676692680</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1677676692681</updated>
+    </task>
+    <task id="LOCAL-00074" summary="세로먼저">
+      <created>1677677790801</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1677677790801</updated>
+    </task>
+    <task id="LOCAL-00075" summary="시퀀스 치워이제">
+      <created>1677677828897</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1677677828897</updated>
+    </task>
+    <task id="LOCAL-00076" summary="찐막">
+      <created>1677678194166</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1677678194166</updated>
+    </task>
+    <task id="LOCAL-00077" summary="init commit">
+      <created>1677759589955</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1677759589955</updated>
+    </task>
+    <task id="LOCAL-00078" summary="리팩토링">
+      <created>1677759920933</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1677759920933</updated>
+    </task>
+    <task id="LOCAL-00079" summary="한줄이라도 줄여보기">
+      <created>1677760251426</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1677760251426</updated>
+    </task>
+    <task id="LOCAL-00080" summary="확장함수 안쓸래">
+      <created>1677760338948</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1677760338948</updated>
+    </task>
+    <task id="LOCAL-00081" summary="코드 스타일 적용">
+      <created>1677760416338</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1677760416338</updated>
+    </task>
+    <task id="LOCAL-00082" summary="set 으로 적용">
+      <created>1677762961755</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1677762961755</updated>
+    </task>
+    <task id="LOCAL-00083" summary="init commit">
+      <created>1677847718047</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1677847718047</updated>
+    </task>
+    <task id="LOCAL-00084" summary="리팩토링">
+      <created>1677849110831</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1677849110831</updated>
+    </task>
+    <task id="LOCAL-00085" summary="var 안쓰기">
+      <created>1677849280221</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1677849280221</updated>
+    </task>
+    <task id="LOCAL-00086" summary="fix compile?">
+      <created>1678020967707</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1678020967708</updated>
+    </task>
+    <task id="LOCAL-00087" summary="fix compile?">
+      <created>1678021234363</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1678021234363</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="빠른버전?" />
+    <MESSAGE value="라인 수나 짧게 가져가쟈,," />
+    <MESSAGE value="범위조정" />
+    <MESSAGE value="하남자 코드" />
+    <MESSAGE value="광기 솔루션 츄가" />
+    <MESSAGE value="아숩,," />
+    <MESSAGE value="index 쓸 필요 없음" />
+    <MESSAGE value="일단 최적화" />
+    <MESSAGE value="일단빠른버전" />
+    <MESSAGE value="내가 할 수 있는 제일 빠른 버전" />
+    <MESSAGE value="이쁘면서 빠른 버전" />
+    <MESSAGE value="진짜빠른버전" />
+    <MESSAGE value="진짜빠르고이쁜버전" />
+    <MESSAGE value="bb" />
+    <MESSAGE value="세로먼저" />
+    <MESSAGE value="시퀀스 치워이제" />
+    <MESSAGE value="찐막" />
+    <MESSAGE value="한줄이라도 줄여보기" />
+    <MESSAGE value="확장함수 안쓸래" />
+    <MESSAGE value="코드 스타일 적용" />
+    <MESSAGE value="set 으로 적용" />
+    <MESSAGE value="init commit" />
+    <MESSAGE value="리팩토링" />
+    <MESSAGE value="var 안쓰기" />
+    <MESSAGE value="fix compile?" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix compile?" />
+  </component>
+</project>

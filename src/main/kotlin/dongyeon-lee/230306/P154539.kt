@@ -11,9 +11,7 @@ class Solution {
             }
             stack.addLast(idx)
         }
-        while (stack.isNotEmpty()) {
-            answer[stack.removeLast()] = -1
-        }
+        stack.forEach { answer[it] = it }
         return answer.toIntArray()
     }
 }

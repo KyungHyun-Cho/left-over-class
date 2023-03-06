@@ -20,14 +20,12 @@ fun main() {
     println(numbers.map { solution(it) }.joinToString("\n"))
 }
 
-fun solution(numbers: IntArray): List<Int> {
-    val (ans, tmp) = mutableListOf<Int>() to ArrayDeque<Int>()
-
-    numbers.reversed().forEach {
-        while (tmp.isNotEmpty() && tmp.last() <= it) tmp.removeLast()
-        ans.add(tmp.lastOrNull() ?: -1)
-        tmp.addLast(it)
+fun solution(numbers: IntArray) = mutableListOf<Int>().apply {
+    val biggerDeque = ArrayDeque<Int>()
+    numbers.reversed().forEach { num ->
+        while (biggerDeque.lastOrNull()?.let { it <= num } == true) biggerDeque.removeLast()
+        this.add(biggerDeque.lastOrNull() ?: -1)
+        biggerDeque.addLast(num)
     }
+}.reversed()
 
-    return ans.reversed()
-}

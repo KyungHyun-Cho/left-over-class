@@ -1,10 +1,10 @@
-package `jaeguk-cho`.`뒤에 있는 큰 수 찾기`
+package `jaeguk-cho`.`230304`
 
 /**
  * @author Jaeguk Cho
  */
 
-class `뒤에 있는 큰 수 찾기` {
+class Solution {
     fun solution(numbers: IntArray) = with(ArrayDeque<Pair<Int, Int>>()) {
         val answer = MutableList(numbers.size) { -1 }
         addLast(Int.MAX_VALUE to -1)

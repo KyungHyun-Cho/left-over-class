@@ -3,13 +3,13 @@ package `dongyeon-lee`.`230307`
 /* 킹국갓사 */
 class Solution {
     fun solution(n: Int, times: IntArray): Long {
-        var answer: Long = 0
+        var answer = 0L
 
-        var min: Long = 1
-        var max: Long = n.toLong() * times.maxOrNull()!!
+        var min = 1L
+        var max = n.toLong() * times.maxOrNull()!!
         while (min <= max) {
             val mid = (min + max) / 2
-            val people = times.fold(0L) { acc, time -> acc + (mid / time) }
+            val people = times.sumOf { mid / it }
             if (people < n) {
                 min = mid + 1
             } else {

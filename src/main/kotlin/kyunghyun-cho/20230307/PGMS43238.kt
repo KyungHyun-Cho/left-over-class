@@ -11,15 +11,15 @@ fun main() {
 }
 
 fun solution(n: Int, times: IntArray): Long {
-    var (low, high) = 0L to Long.MAX_VALUE/7L
+    var (low, high) = 0L to Long.MAX_VALUE / 100000
     var answer = high
     while (low <= high) {
-        val mid = (low + high) / 2L
+        val mid = (low + high) / 2
         val ppl = times.sumOf { mid / it }
         if (ppl < n) {
             low = mid + 1
-        } else{
-            answer = kotlin.math.min(mid, answer)
+        } else {
+            answer = mid
             high = mid - 1
         }
     }

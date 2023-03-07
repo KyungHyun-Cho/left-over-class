@@ -6,7 +6,7 @@ class Solution {
         var answer = 0L
 
         var min = 1L
-        var max = n.toLong() * times.maxOrNull()!!
+        var max = n.toLong() * (times.maxOrNull() ?: 0)
         while (min <= max) {
             val mid = (min + max) / 2
             val people = times.sumOf { mid / it }

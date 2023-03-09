@@ -1,6 +1,5 @@
 package `dongyeon-lee`.`230309`
 
-/* 징검다리 건너기 */
 class Solution {
     fun solution(stones: IntArray, k: Int): Int {
         var answer = 0
@@ -11,9 +10,12 @@ class Solution {
         fun check(mid: Int): Boolean {
             var gap = 0
             stones.forEach { stone ->
-                if (stone <= mid && gap <= k) {
+                gap++
+                if (stone >= mid ) {
                     gap = 0
-                } else return false
+                }
+
+                if (gap >= k) return false
             }
             return true
         }

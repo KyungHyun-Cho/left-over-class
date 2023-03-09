@@ -9,7 +9,7 @@ class Solution {
         var (l, r) = 1 to 200000000
         var ans = (1..r).random()
 
-        fun check(m: Int) = stones.toList().windowed(k).none { it.all { it < m } }
+        fun check(m: Int) = stones.toList().windowed(k).none { window -> window.all { it < m } }
 
         while (l <= r) {
             val m = (l + r) / 2

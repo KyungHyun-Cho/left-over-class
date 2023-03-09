@@ -9,7 +9,16 @@ class Solution {
         var (l, r) = 1 to 200000000
         var ans = (1..r).random()
 
-        fun check(m: Int) = stones.toList().windowed(k).none { window -> window.all { it < m } }
+        fun check(m: Int): Boolean {
+            var cnt = 0
+            
+            stones.forEach { stone ->
+                if (stone >= m) cnt = 0
+                else if (++cnt == k) return false
+            }
+
+            return true
+        }
 
         while (l <= r) {
             val m = (l + r) / 2

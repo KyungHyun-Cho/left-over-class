@@ -17,6 +17,7 @@ fun main() {
         Triple(20, 5, intArrayOf(1, 4, 8, 12, 16, 20)),
         )
     println(params.map { solution(it.first, it.second, it.third) })
+    println(params.map { fastSolution(it.first, it.second, it.third) })
 }
 
 fun solution(n: Int, m: Int, section: IntArray): Int {
@@ -27,6 +28,18 @@ fun solution(n: Int, m: Int, section: IntArray): Int {
         answer++
         while (dq.isNotEmpty() && (dq.first() - polled) < m) {
             dq.removeFirst()
+        }
+    }
+    return answer
+}
+
+fun fastSolution(n: Int, m: Int, section: IntArray): Int {
+    var answer = 1
+    var std = section.first()
+    (1 until section.size).forEach {
+        if(section[it] - std >= m){
+            std = section[it]
+            answer++
         }
     }
     return answer

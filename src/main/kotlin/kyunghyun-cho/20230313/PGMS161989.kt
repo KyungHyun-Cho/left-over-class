@@ -35,7 +35,7 @@ fun solution(n: Int, m: Int, section: IntArray): Int {
 
 fun fastSolution(n: Int, m: Int, section: IntArray): Int {
     var answer = 1
-    var std = section.first()
+    var std = section[0]
     (1 until section.size).forEach {
         if(section[it] - std >= m){
             std = section[it]

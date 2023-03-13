@@ -15,7 +15,7 @@ fun main() {
         Triple(14, 2, intArrayOf(3, 6, 9, 12)),
         Triple(20, 4, intArrayOf(1, 4, 8, 12, 16, 20)),
         Triple(20, 5, intArrayOf(1, 4, 8, 12, 16, 20)),
-        )
+    )
     println(params.map { solution(it.first, it.second, it.third) })
     println(params.map { fastSolution(it.first, it.second, it.third) })
 }
@@ -34,13 +34,7 @@ fun solution(n: Int, m: Int, section: IntArray): Int {
 }
 
 fun fastSolution(n: Int, m: Int, section: IntArray): Int {
-    var answer = 1
-    var std = section[0]
-    (1 until section.size).forEach {
-        if(section[it] - std >= m){
-            std = section[it]
-            answer++
-        }
-    }
+    var (answer, std) = 0 to -1
+    section.forEach { sec -> if (std == -1 || sec - std >= m) (answer++).also { std = sec } }
     return answer
 }

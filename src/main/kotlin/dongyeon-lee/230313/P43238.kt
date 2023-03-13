@@ -4,12 +4,12 @@ package `dongyeon-lee`.`230313`
 class Solution {
     fun solution(n: Int, m: Int, section: IntArray): Int {
         var answer = 0
-        if (m == 1) return section.size
-        var cursor = -1
-        section.forEach { sec ->
-            if (sec <= cursor) return@forEach
-            answer++
-            cursor = sec + m.dec().coerceAtLeast(1)
+        if (m == 1) return section.first()
+        section.fold(-1) { cursor, sec ->
+            if (sec > cursor) {
+                answer++
+                sec + m.dec().coerceAtLeast(1)
+            } else cursor
         }
         return answer
     }

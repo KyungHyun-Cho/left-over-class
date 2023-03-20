@@ -42,8 +42,3 @@ class Solution {
         }
     }
 }
-fun main() {
-    val s = listOf("AC", "CDE", "ACDE", "BCFG")
-    val c = "oKtlin"
-    println(s.sorted())
-}

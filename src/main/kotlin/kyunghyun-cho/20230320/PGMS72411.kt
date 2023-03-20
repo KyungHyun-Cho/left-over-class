@@ -22,8 +22,8 @@ fun solution(orders: Array<String>, course: IntArray) =
         }
 
 fun pick(order: CharArray, cnt: Int, idx: Int = 0, picked: MutableList<Char> = mutableListOf()): Set<String> {
-    val answer = mutableSetOf<String>()
     if (picked.size == cnt) return setOf(picked.joinToString(""))
+    val answer = mutableSetOf<String>()
 
     (idx until order.size).forEach {
         picked.add(order[it])

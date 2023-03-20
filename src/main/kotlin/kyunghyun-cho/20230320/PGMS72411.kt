@@ -13,7 +13,7 @@ fun main() {
 }
 
 fun solution(orders: Array<String>, course: IntArray) =
-    course.asSequence().flatMap{ courseCnt ->
+    course.asSequence().flatMap { courseCnt ->
         orders.map { it.toCharArray().sortedArray() }
             .flatMap { pick(it, courseCnt) }
     }.groupingBy { it }.eachCount().filter { it.value >= 2 }

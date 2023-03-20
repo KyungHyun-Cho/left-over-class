@@ -14,8 +14,7 @@ fun main() {
 
 fun solution(orders: Array<String>, course: IntArray) =
     course.asSequence().flatMap { courseCnt ->
-        orders.map { it.toCharArray().sortedArray() }
-            .flatMap { pick(it, courseCnt) }
+        orders.flatMap { it.toCharArray().sortedArray().let { pick(it, courseCnt) } }
     }.groupingBy { it }.eachCount().filter { it.value >= 2 }
         .let { map ->
             val maxValueByKeyLength = map.map { it.key.length to it.value }.sortedBy { it.second }.associate { it }

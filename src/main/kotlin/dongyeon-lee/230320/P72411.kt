@@ -8,16 +8,17 @@ class Solution {
     fun solution(orders: Array<String>, course: IntArray): Array<String> {
         var answer: MutableList<String> = arrayOf<String>().toMutableList()
         val sortedOrder = orders.map { it.toCharArray().sorted().joinToString("") }
+        val menus = orders.flatMap { it.toCharArray().sorted() }.toSet()
         course.forEach {
             max.clear() ; maxSize = 0
-            dfs(0, it, sortedOrder, "")
+            dfs(0, it, sortedOrder, "", menus)
             max.map { it.toCharArray().sorted().joinToString("") }.toSet().forEach { answer.add(it) }
         }
 
         return answer.sorted().toTypedArray()
     }
 
-    private fun dfs(depth: Int, course: Int, orders: List<String>, comb: String) {
+    private fun dfs(depth: Int, course: Int, orders: List<String>, comb: String, menus: Set<Char>) {
         if (depth == course) {
             val size = orders.count { order ->
                 val new = order.toList() - comb.toList()
@@ -35,10 +36,9 @@ class Solution {
             return
         }
 
-        for (i in 0 until 26) {
-            val alphabet = ('A' + i)
-            if (alphabet in comb) continue
-            dfs(depth + 1, course, orders, comb + alphabet)
+        for (menu in menus) {
+            if (menu in comb) continue
+            dfs(depth + 1, course, orders, comb + menu, menus)
         }
     }
 }

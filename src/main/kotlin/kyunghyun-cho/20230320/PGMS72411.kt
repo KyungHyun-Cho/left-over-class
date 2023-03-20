@@ -16,9 +16,9 @@ fun solution(orders: Array<String>, course: IntArray) =
     course.asSequence().flatMap { courseCnt ->
         orders.flatMap { it.toCharArray().sortedArray().let { pick(it, courseCnt) } }
     }.groupingBy { it }.eachCount().filter { it.value >= 2 }
-        .let { map ->
-            val maxValueByKeyLength = map.map { it.key.length to it.value }.sortedBy { it.second }.associate { it }
-            map.filter { it.value == maxValueByKeyLength[it.key.length] }.keys.sorted()
+        .let { setMenuCandidate ->
+            val maxValueByKeyLength = setMenuCandidate.map { it.key.length to it.value }.sortedBy { it.second }.associate { it }
+            setMenuCandidate.filter { it.value == maxValueByKeyLength[it.key.length] }.keys.sorted()
         }
 
 fun pick(order: CharArray, cnt: Int, idx: Int = 0, picked: MutableList<Char> = mutableListOf()): Set<String> {

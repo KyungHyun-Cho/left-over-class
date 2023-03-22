@@ -30,9 +30,9 @@ const val INF = 123456789
 fun solution(N: Int, road: Array<IntArray>, k: Int): Int {
 
     val map = Array(N + 1) { IntArray(N + 1) { INF } }.apply {
-        road.forEach { (f, s, v) ->
-            this[f][s] = this[f][s].coerceAtMost(v)
-            this[s][f] = this[s][f].coerceAtMost(v)
+        road.forEach { (from, to, dist) ->
+            this[from][to] = this[from][to].coerceAtMost(dist)
+            this[to][from] = this[to][from].coerceAtMost(dist)
         }
     }
 

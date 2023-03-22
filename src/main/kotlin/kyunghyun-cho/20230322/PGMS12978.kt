@@ -1,0 +1,48 @@
+package `kyunghyun-cho`.`20230322`
+
+/**
+ * @author Kyunghyun Cho
+ */
+
+fun main() {
+    listOf(
+        Triple(5,
+            arrayOf(intArrayOf(1, 2, 1),
+                intArrayOf(2, 3, 3),
+                intArrayOf(5, 2, 2),
+                intArrayOf(1, 4, 2),
+                intArrayOf(5, 3, 1),
+                intArrayOf(5, 4, 2)),
+            3),
+        Triple(6,
+            arrayOf(intArrayOf(1, 2, 1),
+                intArrayOf(1, 3, 2),
+                intArrayOf(2, 3, 2),
+                intArrayOf(3, 4, 3),
+                intArrayOf(3, 5, 2),
+                intArrayOf(3, 5, 3),
+                intArrayOf(5, 6, 1)),
+            4)
+    ).map { solution(it.first, it.second, it.third) }.also { println(it) }
+}
+
+const val INF = 123456789
+fun solution(N: Int, road: Array<IntArray>, k: Int): Int {
+
+    val map = Array(N + 1) { IntArray(N + 1) { INF } }.apply {
+        road.forEach { (f, s, v) ->
+            this[f][s] = this[f][s].coerceAtMost(v)
+            this[s][f] = this[s][f].coerceAtMost(v)
+        }
+    }
+
+    (1..N).forEach { f ->
+        (1..N).forEach { s ->
+            (1..N).forEach { t ->
+                if(map[s][f] + map[f][t] < map[s][t]) map[s][t] = map[s][f] + map[f][t]
+            }
+        }
+    }
+
+    return map[1].filterIndexed { index, i -> index != 1 && i <= k }.count() + 1
+}

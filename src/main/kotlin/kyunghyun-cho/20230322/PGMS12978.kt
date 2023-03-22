@@ -36,10 +36,10 @@ fun solution(N: Int, road: Array<IntArray>, k: Int): Int {
         }
     }
 
-    (1..N).forEach { f ->
-        (1..N).forEach { s ->
-            (1..N).forEach { t ->
-                if(map[s][f] + map[f][t] < map[s][t]) map[s][t] = map[s][f] + map[f][t]
+    (1..N).forEach { stop ->
+        (1..N).forEach { from ->
+            (1..N).forEach { to ->
+                if(map[from][stop] + map[stop][to] < map[from][to]) map[from][to] = map[from][stop] + map[stop][to]
             }
         }
     }

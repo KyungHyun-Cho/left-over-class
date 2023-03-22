@@ -15,16 +15,13 @@ class Solution {
     }
 
     fun dijkstra(n: Int, nodes: List<List<Node>>): List<Int> {
-        val isVisited = MutableList(n + 1) { false }
         val dst = MutableList(n  + 1) { 1_000_000_000 }
         val pq = PriorityQueue<Node>()
         dst[1] = 0
         pq.add(Node(1, 0))
         while (pq.isNotEmpty()) {
             val node = pq.poll()
-            println(nodes[node.to])
             if (dst[node.to] < node.weight) continue
-            isVisited[node.to] = true
 
             nodes[node.to].forEach { childNode ->
                 if (dst[childNode.to] > node.weight + childNode.weight) {
@@ -33,7 +30,6 @@ class Solution {
                 }
             }
         }
-        println(dst)
         return dst
     }
 }
